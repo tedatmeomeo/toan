@@ -22,7 +22,6 @@
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       text-align: center;
     }
 
@@ -32,13 +31,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 30px 20px;
+      padding: 20px 20px 70px; /* chừa chỗ cho footer */
     }
 
     /* Avatar */
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       padding: 3px;
       margin-bottom: 15px;
@@ -55,13 +54,13 @@
 
     /* Typing text */
     h1 {
-      font-size: 32px;
+      font-size: 26px;
       font-family: monospace;
       border-right: 3px solid #00e1ff;
       white-space: nowrap;
       overflow: hidden;
       animation: blink 0.7s infinite;
-      min-height: 40px;
+      min-height: 32px;
     }
 
     @keyframes blink {
@@ -69,15 +68,16 @@
     }
 
     .desc {
-      font-size: 14px;
+      font-size: 13px;
       color: #bbb;
-      margin: 15px 0 25px;
+      margin: 12px 0 20px;
+      padding: 0 10px;
     }
 
     /* Social icons */
     .socials a {
-      font-size: 22px;
-      margin: 0 10px;
+      font-size: 20px;
+      margin: 0 8px;
       color: #00e1ff;
       transition: 0.3s;
     }
@@ -87,10 +87,33 @@
       transform: scale(1.2);
     }
 
+    /* Footer luôn hiện */
     footer {
       font-size: 12px;
       color: #888;
       padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.2);
+      backdrop-filter: blur(5px);
+    }
+
+    /* Responsive thêm cho màn nhỏ */
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 22px;
+      }
+
+      .avatar {
+        width: 90px;
+        height: 90px;
+      }
+
+      .socials a {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
@@ -133,7 +156,7 @@
       if (i <= text.length) {
         el.textContent = text.slice(0, i);
         i++;
-        setTimeout(typeEffect, 120);
+        setTimeout(typeEffect, 100);
       } else {
         setTimeout(() => {
           i = 0;
