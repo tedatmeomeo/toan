@@ -1,117 +1,149 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học Toán Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website by ThanhDat</title>
 
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background-image: url(anh/bgr.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+  <!-- Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-            font-family: Arial, Helvetica, sans-serif;
-            color: #333;
-        }
+    body {
+      height: 100vh;
+      background: linear-gradient(180deg, #120020, #154355);
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
 
-        .container {
-            background: rgba(255, 255, 255, 0.75);
-            padding: 40px 60px;
-            border-radius: 20px;
-            max-width: 900px;
-            width: 90%;
-            text-align: center;
-        }
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+    }
 
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 30px;
-        }
+    /* Avatar */
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      padding: 3px;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, #00e1ff, #8a2be2);
+      box-shadow: 0 0 15px rgba(0, 225, 255, 0.6);
+    }
 
-        h2 {
-            color: #1e88e5;
-            margin-top: 30px;
-        }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+    /* Typing text */
+    h1 {
+      font-size: 32px;
+      font-family: monospace;
+      border-right: 3px solid #00e1ff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink 0.7s infinite;
+      min-height: 40px;
+    }
 
-        li {
-            margin: 10px 0;
-        }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
 
-        a {
-            text-decoration: none;
-            color: #6a1b9a;
-            font-weight: 500;
-            transition: 0.3s;
-        }
+    .desc {
+      font-size: 14px;
+      color: #bbb;
+      margin: 15px 0 25px;
+    }
 
-        a:hover {
-            color: #e91e63;
-            padding-left: 5px;
-        }
+    /* Social icons */
+    .socials a {
+      font-size: 22px;
+      margin: 0 10px;
+      color: #00e1ff;
+      transition: 0.3s;
+    }
 
-        footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #555;
-        }
-    </style>
+    .socials a:hover {
+      color: #00ffff;
+      transform: scale(1.2);
+    }
+
+    footer {
+      font-size: 12px;
+      color: #888;
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
 
-    <h1>📘 TOÁN KHÓ HƠN BẠN NGHĨ </h1>
+  <div class="container">
 
-    <h2>HÀM SỐ, ĐỒ THỊ VÀ ỨNG DỤNG</h2>
-    <ul>
-        <li><a href="chuong6/bai15.html">Bài 15. Hàm số</a></li>
-        <li><a href="chuong6/bai16.html">Bài 16. Hàm số bậc hai</a></li>
-        <li><a href="chuong6/bai17.html">Bài 17. Dấu của tam thức bậc hai</a></li>
-        <li><a href="chuong6/bai18.html">Bài 18. Phương trình quy về PT bậc hai</a></li>
-        <li><a href="chuong6/baitapcuoichuong.html">Bài tập cuối chương</a></li>
-    </ul>
+    <!-- Avatar -->
+    <div class="avatar">
+      <img src="avt.jpg" alt="avatar">
+    </div>
 
-    <h2>PHƯƠNG PHÁP TỌA ĐỘ TRONG MẶT PHẲNG</h2>
-    <ul>
-        <li><a href="chuong7/bai19.html">Bài 19. Phương trình đường thẳng</a></li>
-        <li><a href="chuong7/bai20.html">Bài 20. Đường thẳng trong mặt phẳng tọa độ</a></li>
-        <li><a href="chuong7/bai21.html">Bài 21. Đường tròn trong mặt phẳng tọa độ</a></li>
-        <li><a href="chuong7/bai22.html">Bài 22. Ba đường Conic</a></li>
-        <li><a href="chuong7/battapcuoichuong7.html">Bài tập cuối chương</a></li>
-    </ul>
+    <!-- Text typing -->
+    <h1 id="text"></h1>
 
-    <h2>ĐẠI SỐ TỔ HỢP</h2>
-    <ul>
-        <li><a href="chuong8/bai23.html">Bài 23. Quy tắc đếm</a></li>
-        <li><a href="chuong8/bai24.html">Bài 24. Hoán vị – Chỉnh hợp – Tổ hợp</a></li>
-        <li><a href="chuong8/bai25.html">Bài 25. Nhị thức Newton</a></li>
-        <li><a href="chuong8/baitapcupochuong8.html">Bài tập cuối chương</a></li>
-    </ul>
+    <p class="desc">“deo co me gi dau ton thoi gian chua !”</p>
 
-    <h2>XÁC SUẤT CỔ ĐIỂN</h2>
-    <ul>
-        <li><a href="chuong9/bai26.html">Bài 26. Biến cố & xác suất cổ điển</a></li>
-        <li><a href="chuong9/bai27.html">Bài 27. Thực hành xác suất</a></li>
-        <li><a href="chuong9/baitapcuoichuong9.html">Bài tập cuối chương</a></li>
-    </ul>
+    <!-- Social -->
+    <div class="socials">
+      <a href="https://www.instagram.com/_t.datt07/"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:thanhdatbmq@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.facebook.com/tdatcutiihihihi"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@zaihubngongheck"><i class="fab fa-tiktok"></i></a>
+    </div>
 
-    <footer>
-        &copy; 2026 Nguyễn Thành Đạt
-    </footer>
+  </div>
 
-</div>
+  <footer>
+    © 2025 Thanh Dat!
+  </footer>
+
+  <script>
+    const text = "bbi em la ai?";
+    let i = 0;
+
+    function typeEffect() {
+      const el = document.getElementById("text");
+
+      if (i <= text.length) {
+        el.textContent = text.slice(0, i);
+        i++;
+        setTimeout(typeEffect, 120);
+      } else {
+        setTimeout(() => {
+          i = 0;
+          typeEffect();
+        }, 1500);
+      }
+    }
+
+    typeEffect();
+  </script>
+
 </body>
 </html>
